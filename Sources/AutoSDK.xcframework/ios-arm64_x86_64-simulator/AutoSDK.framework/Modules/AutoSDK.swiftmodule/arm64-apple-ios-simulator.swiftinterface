@@ -1,0 +1,866 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AutoSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+@_exported import AutoSDK
+import Combine
+import CoreBluetooth
+import CoreData
+import CoreLocation
+import CoreMotion
+import EventKit
+import Foundation
+import MapKit
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor @preconcurrency public static let modelName: Swift.String
+}
+extension CoreLocation.CLLocationManager {
+  public func setAccuracy(_ value: AutoSDK.LocationAccuracy)
+}
+public enum LocationAccuracy {
+  case best
+  case bestForNavigation
+  case nearestTenMeters
+  case hundredMeters
+  case kilometer
+  case threeKilometers
+  case reduced
+  public static func == (a: AutoSDK.LocationAccuracy, b: AutoSDK.LocationAccuracy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HealthUploadModel : Swift.Codable {
+  public let driverId: Swift.String
+  public let permissions: [AutoSDK.PermissionUploadModel]
+  public let timestamp: Swift.String
+  public let platform: Swift.String
+  public let sdkVersion: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PermissionUploadModel : Swift.Codable {
+  public let permissionType: Swift.String
+  public let status: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum RankingInterval : Swift.String {
+  case Overall
+  case Monthly
+  case Weekly
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol SanukSDKDelegate : ObjectiveC.NSObjectProtocol {
+  func onStateChanged(state: AutoSDK.SanukSDKState)
+  func onSettingsChanged()
+  func onTripStarted()
+  func onTripEnded()
+  func onCollisionDetected(collisionInfo: AutoSDK.CollisionInfo)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var size: CoreFoundation.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var width: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var height: CoreFoundation.CGFloat {
+    get
+    set
+  }
+}
+public struct SdkTripModel : Swift.Codable {
+  public let id: Swift.String
+  public let driverID: Swift.String
+  public let orgPath: Swift.String
+  public let tripStartTime: Swift.String
+  public let tripEndTime: Swift.String
+  public let tripStatus: Swift.String
+  public let tripEvents: [AutoSDK.SdkTripEvent]?
+  public let simplePath: [AutoSDK.SdkSimplePath]?
+  public let smoothPath: [AutoSDK.SdkSimplePath]?
+  public let tripScore: AutoSDK.SdkTripScore
+  public let isVehicleTagged: Swift.Bool?
+  public let tripDistance: Swift.Double
+  public let error: AutoSDK.SdkTripError
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkSimplePath : Swift.Codable {
+  public let latitude: Swift.Double
+  public let longitude: Swift.Double
+  public let timestamp: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripEvent : Swift.Codable {
+  public let eventType: Swift.String
+  public let eventStartTime: Swift.String
+  public let eventEndTime: Swift.String
+  public let eventStartLocation: AutoSDK.SdkTripEventLocation?
+  public let highestMagLocation: AutoSDK.SdkTripEventLocation?
+  public let metaData: AutoSDK.SdkTripEventMetaData?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripEventLocation : Swift.Codable {
+  public let latitude: Swift.Double
+  public let longitude: Swift.Double
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripEventMetaData : Swift.Codable {
+  public let highest: Swift.Double?
+  public let highestLocation: AutoSDK.SdkTripEventLocation?
+  public let highestTime: Swift.String?
+  public let actualSpeed: Swift.Double?
+  public let postedSpeed: Swift.Double?
+  public let duration: Swift.Double?
+  public let path: [AutoSDK.SdkTripEventMetaPath]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripEventMetaPath : Swift.Codable {
+  public let actualSpeed: Swift.Double
+  public let postedSpeed: Swift.Double
+  public let sdkSpeed: Swift.Double
+  public let mappedLatitude: Swift.Double
+  public let mappedLongitude: Swift.Double
+  public let originalLatitude: Swift.Double
+  public let originalLongitude: Swift.Double
+  public let time: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripScore : Swift.Codable {
+  public let overall: Swift.Int
+  public let speeding: Swift.Int
+  public let phoneUse: Swift.Int
+  public let hardbreaking: Swift.Int
+  public let rapidAcceleration: Swift.Int
+  public let turning: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SdkTripError : Swift.Codable {
+  public let code: Swift.Int
+  public let message: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc(Addinfo) public class Addinfo : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public struct CollisionConfirmationInfo {
+  public init(collisionID: Swift.String, isCollision: Swift.Bool, isMinorCollision: Swift.Bool)
+}
+open class Permission {
+  open var authorized: Swift.Bool {
+    get
+  }
+  open var denied: Swift.Bool {
+    get
+  }
+  open var notDetermined: Swift.Bool {
+    get
+  }
+  open var debugName: Swift.String {
+    get
+  }
+  open var localisedName: Swift.String {
+    get
+  }
+  @available(iOSApplicationExtension, unavailable)
+  open func openSettingPage()
+  open var kind: AutoSDK.Permission.Kind {
+    get
+  }
+  open var status: AutoSDK.Permission.Status {
+    get
+  }
+  open func request(completion: @escaping () -> Swift.Void)
+  open var canBePresentWithCustomInterface: Swift.Bool {
+    get
+  }
+  public init()
+  @objc public enum Status : Swift.Int, Swift.CustomStringConvertible {
+    case authorized
+    case denied
+    case notDetermined
+    case notSupported
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Kind {
+    case camera
+    case notification
+    case photoLibrary
+    case microphone
+    case calendar(access: AutoSDK.Permission.CalendarAccess)
+    case contacts
+    case reminders
+    case speech
+    case location(access: AutoSDK.Permission.LocationAccess)
+    case motion
+    case mediaLibrary
+    case bluetooth
+    case tracking
+    case faceID
+    case siri
+    case health
+    public var name: Swift.String {
+      get
+    }
+  }
+  public enum CalendarAccess {
+    case full
+    case write
+    public static func == (a: AutoSDK.Permission.CalendarAccess, b: AutoSDK.Permission.CalendarAccess) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum LocationAccess {
+    case whenInUse
+    case always
+    public static func == (a: AutoSDK.Permission.LocationAccess, b: AutoSDK.Permission.LocationAccess) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+public enum SanukSDKErrorType {
+  case PermissionRequired
+  case Other
+  public static func == (a: AutoSDK.SanukSDKErrorType, b: AutoSDK.SanukSDKErrorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class SanukSDKError : Swift.Error {
+  @objc deinit
+}
+extension AutoSDK.SanukSDKError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension AutoSDK.Vehicle {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Vehicle>
+  @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
+  @objc @NSManaged dynamic public var id: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var vehicleName: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var macAddress: Swift.String {
+    @objc get
+    @objc set
+  }
+}
+extension AutoSDK.Vehicle : Swift.Identifiable {
+  public typealias ID = Swift.Int64
+}
+public protocol SanukSDKTRipDelegate : ObjectiveC.NSObjectProtocol {
+  func tripDidStart(info: AutoSDK.TripStartInfo)
+  func tripDidEnd(info: any AutoSDK.TripInfo)
+  func tripProcessed(info: any AutoSDK.TripInfo)
+}
+public enum SanukSDKState {
+  case stopped
+  case starting
+  case started
+  public static func == (a: AutoSDK.SanukSDKState, b: AutoSDK.SanukSDKState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class SanukSDKClient {
+  public static let shared: AutoSDK.SanukSDKClient
+  public var isStarted: Swift.Bool {
+    get
+  }
+  public func start(driverID: Swift.String, delegate: any AutoSDK.SanukSDKDelegate)
+  public func stop()
+  public func checkSdkSettings(completion: (AutoSDK.AutoSdkSettings) -> Swift.Void)
+  public func getDriverScore(_ completion: @escaping (AutoSDK.DriverScore?) -> Swift.Void)
+  public func getWeeklyScore(_ completion: @escaping ([AutoSDK.DriverScore]?) -> Swift.Void)
+  public func getTrips(pageIndex: Swift.Int, tripsPerPage: Swift.Int, _ completion: @escaping ([AutoSDK.SdkTripModel]?) -> Swift.Void)
+  public func deleteTrips(tripID: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func getRanking(interval: AutoSDK.RankingInterval, _ completion: @escaping (AutoSDK.RankingModel?) -> Swift.Void)
+  public func getLocalTrips() -> [AutoSDK.Trips]
+  public func getAssociatedVehicles() -> [AutoSDK.Vehicle]
+  public func associateVehicle(vehicleName: Swift.String, bluetoothId: Swift.String)
+  public func deassociateVehicle(vehicle: AutoSDK.Vehicle)
+  public func getActiveBluetoothDevice() -> [AutoSDK.BluetoothDevice]
+  public func triggerMockCollision(info: AutoSDK.MockCollisionInfo)
+  public func confirmCollision(confirmationInfo: AutoSDK.CollisionConfirmationInfo)
+  @objc deinit
+}
+public struct MockCollisionInfo {
+  public init(tripID: Swift.String, latitude: Swift.Double, longitude: Swift.Double)
+}
+@_inheritsConvenienceInitializers @objc(Health) public class Health : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Vehicle) public class Vehicle : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Trips) public class Trips : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension AutoSDK.Permission {
+  public static func location(access: AutoSDK.Permission.LocationAccess) -> AutoSDK.LocationPermission
+}
+@_hasMissingDesignatedInitializers public class LocationPermission : AutoSDK.Permission {
+  override open var kind: AutoSDK.Permission.Kind {
+    get
+  }
+  open var usageDescriptionKey: Swift.String? {
+    get
+  }
+  override public var status: AutoSDK.Permission.Status {
+    get
+  }
+  public var isPrecise: Swift.Bool {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public struct RankingModel : Swift.Codable {
+  public let interval: Swift.String
+  public let intervalStart: Swift.String
+  public let ranks: [AutoSDK.Rank]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Rank : Swift.Codable {
+  public let previousRank: AutoSDK.RankDetails
+  public let currentRank: AutoSDK.RankDetails
+  public let rankProgression: AutoSDK.RankProgress
+  public let scoreProgression: AutoSDK.RankProgress
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RankDetails : Swift.Codable {
+  public let driverID: Swift.String
+  public let firstName: Swift.String
+  public let lastName: Swift.String
+  public let company: Swift.String
+  public let fleet: Swift.String
+  public let averageScore: Swift.Int
+  public let totalDistanceKM: Swift.Double
+  public let rankPosition: Swift.Int
+  public let interval: Swift.String
+  public let intervalStart: Swift.String
+  public let drivingBehaviourCategory: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RankProgress : Swift.Codable {
+  public let value: Swift.Int
+  public let indicator: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension AutoSDK.Permission {
+  public static var notification: AutoSDK.NotificationPermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class NotificationPermission : AutoSDK.Permission {
+  override open var kind: AutoSDK.Permission.Kind {
+    get
+  }
+  override public var status: AutoSDK.Permission.Status {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+extension AutoSDK.Addinfo {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Addinfo>
+  @nonobjc public class func deleteRequest(deleteFetch: CoreData.NSFetchRequest<any CoreData.NSFetchRequestResult>) -> CoreData.NSBatchDeleteRequest
+  @objc @NSManaged dynamic public var isActive: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var keyfield: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var valuefield: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var trip: AutoSDK.Trips? {
+    @objc get
+    @objc set
+  }
+}
+public struct BluetoothDevice {
+  public let name: Swift.String
+  public let identifier: Swift.String
+}
+@_inheritsConvenienceInitializers @objc(Location) public class Location : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+public struct DriverScore : Swift.Codable {
+  public let overall: Swift.Int
+  public let speeding: Swift.Int
+  public let phoneUse: Swift.Int
+  public let breaking: Swift.Int
+  public let acceleration: Swift.Int
+  public let turning: Swift.Int
+  public let kmDriven: Swift.Int
+  public let totalTrips: Swift.Int
+  public let intervalIndex: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AutoSdkIssue {
+  case locationServiceOff
+  case locationPermissionNotAuthorized
+  case activityPermissionNotAuthorized
+  case locationAccuracyReduced
+  case backgroundRefreshDisabled
+  public static func == (a: AutoSDK.AutoSdkIssue, b: AutoSDK.AutoSdkIssue) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct CollisionInfo {
+  public let collisionID: Swift.String
+}
+extension AutoSDK.Trips {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Trips>
+  @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var startDate: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var endDate: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var duration: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var distance: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var uploaded: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var processed: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var evens: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var infos: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isVehicleTagged: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public var events: [AutoSDK.Location] {
+    get
+  }
+  public var addinfo: [AutoSDK.Addinfo] {
+    get
+  }
+}
+extension AutoSDK.Trips {
+  @objc(addEvensObject:) @NSManaged dynamic public func addToEvens(_ value: AutoSDK.Location)
+  @objc(removeEvensObject:) @NSManaged dynamic public func removeFromEvens(_ value: AutoSDK.Location)
+  @objc(addEvens:) @NSManaged dynamic public func addToEvens(_ values: Foundation.NSSet)
+  @objc(removeEvens:) @NSManaged dynamic public func removeFromEvens(_ values: Foundation.NSSet)
+}
+extension AutoSDK.Trips : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+extension AutoSDK.Health {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Health>
+  @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
+  @objc @NSManaged dynamic public var id: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isUploaded: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sdkVersion: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sdkStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var powerSaverStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var batteryOptimizationStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var backgroundRestrictionStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var locationPermissionStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var activityPermissionStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var notificationPermissionStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var airplaneModeStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var backgroundRefreshStatus: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+}
+extension AutoSDK.Health : Swift.Identifiable {
+  public typealias ID = Swift.Int64
+}
+extension AutoSDK.Permission {
+  public static var motion: AutoSDK.MotionPermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class MotionPermission : AutoSDK.Permission {
+  override open var kind: AutoSDK.Permission.Kind {
+    get
+  }
+  open var usageDescriptionKey: Swift.String? {
+    get
+  }
+  override public var status: AutoSDK.Permission.Status {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+public enum HealthStatus {
+  case unavailable, unknown, denied, active, partiallyActive
+  public static func == (a: AutoSDK.HealthStatus, b: AutoSDK.HealthStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AutoSdkSettings {
+  public let issues: [AutoSDK.AutoSdkIssue]
+}
+extension AutoSDK.Location {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Location>
+  @nonobjc public class func deleteRequest(deleteFetch: CoreData.NSFetchRequest<any CoreData.NSFetchRequestResult>) -> CoreData.NSBatchDeleteRequest
+  @objc @NSManaged dynamic public var acceleration: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationX: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationXOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationY: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationYOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationZ: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accelerationZOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var accuracy: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var batteryLevel: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var beaconID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var course: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var deceleration: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var deviceBlocked: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var driverId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var establishedIndexA: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var establishedIndexB: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gpsLevel: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeX: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeXOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeY: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeYOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeZ: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gyroscopeZOriginal: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var height: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lateral: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var latitude: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var longitude: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var measuredPower: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var midSpeed: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var number: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ping: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pitch: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pointDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var quantile: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var roll: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var rssi: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var screenEnabled: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var speed: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tickTimestamp: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var totalMeters: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tripId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var vehicleIndicators: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var version: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var yaw: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var trip: AutoSDK.Trips? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pressure: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var vehType: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension AutoSDK.Location : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+@objc @_hasMissingDesignatedInitializers public class TripStartInfo : ObjectiveC.NSObject {
+  public var sdkSessionId: Swift.String?
+  public var startTime: Swift.Int64
+  @objc deinit
+}
+public protocol TripInfo : ObjectiveC.NSObjectProtocol {
+  var driverId: Swift.String { get set }
+  var tripId: Swift.String { get set }
+  var startTime: Swift.Int64 { get set }
+  var sessionid: Swift.String? { get set }
+  var distance: Swift.Double { get set }
+  var endTime: Swift.Int64? { get set }
+}
+public struct HealthData {
+  public var timestamp: Swift.Int64
+  public var isUploaded: Swift.Int16
+  public var sdkVersion: Swift.String
+  public var sdkStatus: Swift.Int16
+  public var powerSaverStatus: Swift.Int16
+  public var batteryOptimizationStatus: Swift.Int16
+  public var backgroundRestrictionStatus: Swift.Int16
+  public var locationPermissionStatus: Swift.Int16
+  public var activityPermissionStatus: Swift.Int16
+  public var notificationPermissionStatus: Swift.Int16
+  public var airplaneModeStatus: Swift.Int16
+  public var backgroundRefreshStatus: Swift.Int16
+}
+extension AutoSDK.LocationAccuracy : Swift.Equatable {}
+extension AutoSDK.LocationAccuracy : Swift.Hashable {}
+extension AutoSDK.RankingInterval : Swift.Equatable {}
+extension AutoSDK.RankingInterval : Swift.Hashable {}
+extension AutoSDK.RankingInterval : Swift.RawRepresentable {}
+extension AutoSDK.Permission.Status : Swift.Equatable {}
+extension AutoSDK.Permission.Status : Swift.Hashable {}
+extension AutoSDK.Permission.Status : Swift.RawRepresentable {}
+extension AutoSDK.Permission.CalendarAccess : Swift.Equatable {}
+extension AutoSDK.Permission.CalendarAccess : Swift.Hashable {}
+extension AutoSDK.Permission.LocationAccess : Swift.Equatable {}
+extension AutoSDK.Permission.LocationAccess : Swift.Hashable {}
+extension AutoSDK.SanukSDKErrorType : Swift.Equatable {}
+extension AutoSDK.SanukSDKErrorType : Swift.Hashable {}
+extension AutoSDK.SanukSDKState : Swift.Equatable {}
+extension AutoSDK.SanukSDKState : Swift.Hashable {}
+extension AutoSDK.AutoSdkIssue : Swift.Equatable {}
+extension AutoSDK.AutoSdkIssue : Swift.Hashable {}
+extension AutoSDK.HealthStatus : Swift.Equatable {}
+extension AutoSDK.HealthStatus : Swift.Hashable {}

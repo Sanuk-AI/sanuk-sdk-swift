@@ -1,0 +1,11 @@
+framework module AutoSDK {
+  umbrella header "AutoSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module AutoSDK.Swift {
+  header "AutoSDK-Swift.h"
+  requires objc
+}

@@ -1,0 +1,12 @@
+//
+//  MainConfig.xcconfig
+//  AutoSDK
+//
+//  Created by Ye Lin Aung on 29/09/2024.
+//  Copyright © 2024 DRVR. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SDK_VERSION = 0.0.1
