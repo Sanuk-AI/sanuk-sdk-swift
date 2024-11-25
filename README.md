@@ -2,9 +2,9 @@
 
 # Sanuk SDK Swift
 
-SanukSDK is a powerful iOS SDK developed in Swift that empowers developers to seamlessly integrate trip recording, trip scoring, and in-depth driver behavior analysis into their applications.
+The SanukSDK is a powerful tool that enables you to integrate robust driving behavior analysis into your mobile app. By leveraging cutting-edge technology, our SDK provides accurate trip tracking, intelligent behavior detection, and personalized insights to enhance user experiences and promote safer driving.
 
-#### Key Features
+#### Key Capabilities
 
 * **Recording** – SDK automatically captures every trip taken by the user.
 * **Scoring** – Analyzes driving behaviors and assigns a score based on various metrics.
