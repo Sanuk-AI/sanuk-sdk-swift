@@ -2,7 +2,7 @@
 
 # Sanuk SDK Swift
 
-The SanukSDK is a powerful tool that enables you to integrate robust driving behavior analysis into your mobile app. By leveraging cutting-edge technology, our SDK provides accurate trip tracking, intelligent behavior detection, and personalized insights to enhance user experiences and promote safer driving.
+SanukSDK is a powerful tool that enables you to integrate robust driving behavior analysis into your mobile app. By leveraging cutting-edge technology, our SDK provides accurate trip tracking, intelligent behavior detection, and personalized insights to enhance user experiences and promote safer driving.
 
 #### Key Capabilities
 
