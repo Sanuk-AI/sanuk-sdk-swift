@@ -1,4 +1,4 @@
-<!-- [![Swift Version](https://img.shields.io/badge/Swift-5.9-green)](https://www.swift.org) ![iOS Version](https://img.shields.io/badge/iOS-13-blue) -->
+[![Swift Version](https://img.shields.io/badge/Swift-5.9-green)](https://www.swift.org) ![iOS Version](https://img.shields.io/badge/iOS-13-blue)
 
 # Sanuk SDK Swift
 
