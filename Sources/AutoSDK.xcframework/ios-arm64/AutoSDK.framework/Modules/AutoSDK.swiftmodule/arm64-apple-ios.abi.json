@@ -26042,90 +26042,90 @@
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
       "offset": 7823,
-      "length": 32,
-      "value": "\"https:\/\/kamo-dev.drivefleet.io\""
+      "length": 29,
+      "value": "\"https:\/\/kamo-dev.sanuk.tech\""
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 7884,
-      "length": 32,
-      "value": "\"https:\/\/kamo-uat.drivefleet.io\""
+      "offset": 7881,
+      "length": 29,
+      "value": "\"https:\/\/kamo-uat.sanuk.tech\""
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 7946,
-      "length": 28,
-      "value": "\"https:\/\/kamo.drivefleet.io\""
+      "offset": 7940,
+      "length": 25,
+      "value": "\"https:\/\/kamo.sanuk.tech\""
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 8238,
+      "offset": 8229,
       "length": 11,
       "value": "\".location\""
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8298,
+      "offset": 8289,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8336,
+      "offset": 8327,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8384,
+      "offset": 8375,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8673,
+      "offset": 8664,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8696,
+      "offset": 8687,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9016,
+      "offset": 9007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9044,
+      "offset": 9035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9959,
+      "offset": 9950,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yelinaung\/DRVR\/Projects\/iOS\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9987,
+      "offset": 9978,
       "length": 5,
       "value": "false"
     },

@@ -25,7 +25,7 @@ Currently SanukSDKSwift only supports installation via Swift Package Manager. On
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Sanuk-AI/sanuk-sdk-swift.git", from: "0.0.1")
+    .package(url: "https://github.com/Sanuk-AI/sanuk-sdk-swift.git", from: "0.0.2")
 ]
 ```
 
