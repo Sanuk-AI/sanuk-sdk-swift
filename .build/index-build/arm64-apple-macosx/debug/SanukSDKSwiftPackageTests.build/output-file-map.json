@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/master.swiftdeps"
+  },
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift": {
+    "dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner.d",
+    "object": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner.dia"
+  }
+}

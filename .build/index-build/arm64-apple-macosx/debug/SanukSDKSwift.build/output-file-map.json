@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/master.swiftdeps"
+  },
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift": {
+    "dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift.d",
+    "object": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift.swift.o",
+    "swiftmodule": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift.swiftdeps",
+    "diagnostics": "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift.dia"
+  }
+}

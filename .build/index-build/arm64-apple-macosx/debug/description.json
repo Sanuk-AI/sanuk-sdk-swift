@@ -1,0 +1,630 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.xctest/Contents/MacOS/SanukSDKSwiftPackageTests",
+      "packagePath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift",
+      "productName" : "SanukSDKSwiftPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SanukSDKSwift-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources",
+      "importPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SanukSDKSwift",
+      "moduleOutputPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule",
+      "objects" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/SanukSDKSwift.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/include/SanukSDKSwift-Swift.h",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sanuk_sdk_swift"
+      ],
+      "outputFileMapPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift"
+      ],
+      "tempsPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources",
+      "importPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SanukSDKSwiftPackageTests",
+      "moduleOutputPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftPackageTests.swiftmodule",
+      "objects" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/include/SanukSDKSwiftPackageTests-Swift.h",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sanuk_sdk_swift"
+      ],
+      "outputFileMapPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources",
+      "importPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SanukSDKSwiftTests",
+      "moduleOutputPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule",
+      "objects" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/SanukSDKSwiftTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sanuk_sdk_swift"
+      ],
+      "outputFileMapPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift"
+      ],
+      "tempsPath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SanukSDKSwift" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SanukSDKSwift",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-c",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift",
+      "-I",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/include/SanukSDKSwift-Swift.h",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SanukSDKSwiftPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SanukSDKSwiftPackageTests",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-c",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift",
+      "-I",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/include/SanukSDKSwiftPackageTests-Swift.h",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SanukSDKSwiftTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SanukSDKSwiftTests",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-c",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift",
+      "-I",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sanuk_sdk_swift",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SanukSDKSwift" : [
+
+    ],
+    "SanukSDKSwiftPackageTests" : [
+      "SanukSDKSwiftTests",
+      "SanukSDKSwift"
+    ],
+    "SanukSDKSwiftTests" : [
+      "SanukSDKSwift"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources"
+    },
+    "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources"
+    },
+    "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources"
+    },
+    "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

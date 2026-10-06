@@ -1,0 +1,91 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SanukSDKSwift-arm64-apple-macosx15.0-debug.module": ["<SanukSDKSwift-arm64-apple-macosx15.0-debug.module>"]
+  "SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module": ["<SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module>"]
+  "SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module": ["<SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<SanukSDKSwift-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<SanukSDKSwift-arm64-apple-macosx15.0-debug.module>","<SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/AutoSDK.xcframework/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources"]
+    description: "Write auxiliary file /Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources"
+
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources"]
+    description: "Write auxiliary file /Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources"
+
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources"]
+    description: "Write auxiliary file /Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources"
+
+  "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<SanukSDKSwift-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule"]
+    outputs: ["<SanukSDKSwift-arm64-apple-macosx15.0-debug.module>"]
+
+  "<SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftPackageTests.swiftmodule"]
+    outputs: ["<SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule"]
+    outputs: ["<SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.SanukSDKSwift-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/SanukSDKSwift.swift","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule"]
+    description: "Compiling Swift Module 'SanukSDKSwift' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SanukSDKSwift","-emit-dependencies","-emit-module","-emit-module-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule","-output-file-map","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/output-file-map.json","-parse-as-library","-incremental","@/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/sources","-I","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwift.build/include/SanukSDKSwift-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","sanuk_sdk_swift"]
+
+  "C.SanukSDKSwiftPackageTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.derived/runner.swift","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'SanukSDKSwiftPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SanukSDKSwiftPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftPackageTests.swiftmodule","-output-file-map","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/output-file-map.json","-parse-as-library","-incremental","@/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/sources","-I","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftPackageTests.build/include/SanukSDKSwiftPackageTests-Swift.h","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","sanuk_sdk_swift"]
+
+  "C.SanukSDKSwiftTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/SanukSDKSwiftTests.swift","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwift.swiftmodule","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources"]
+    outputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule"]
+    description: "Compiling Swift Module 'SanukSDKSwiftTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SanukSDKSwiftTests","-emit-dependencies","-emit-module","-emit-module-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules/SanukSDKSwiftTests.swiftmodule","-output-file-map","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/output-file-map.json","-parse-as-library","-incremental","@/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/SanukSDKSwiftTests.build/sources","-I","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","sanuk_sdk_swift"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/AutoSDK.xcframework/","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/SanukSDKSwift/","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Tests/SanukSDKSwiftTests/","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Package.swift","/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

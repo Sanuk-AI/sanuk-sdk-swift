@@ -1,0 +1,31 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "sanuk-sdk-swift",
+          "kind" : "root",
+          "location" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift",
+          "name" : "sanuk-sdk-swift"
+        },
+        "path" : "/Volumes/Macintosh_HD/Users/user294468/Developer/sanuk-sdk-swift/Sources/AutoSDK.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "AutoSDK"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AutoSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AutoSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AVFoundation
 @_exported import AutoSDK
 import Combine
@@ -19,6 +19,25 @@ import UserNotifications
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public enum SanukSDKEnvironment : Swift.String, Swift.CaseIterable {
+  case production
+  case sandbox
+  case develop
+  public var baseURL: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias AllCases = [AutoSDK.SanukSDKEnvironment]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AutoSDK.SanukSDKEnvironment] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension UIKit.UIDevice {
   @_Concurrency.MainActor @preconcurrency public static let modelName: Swift.String
 }
@@ -58,7 +77,9 @@ public enum RankingInterval : Swift.String {
   case Overall
   case Monthly
   case Weekly
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -92,6 +113,8 @@ public struct SdkTripModel : Swift.Codable {
   public let tripStartTime: Swift.String
   public let tripEndTime: Swift.String
   public let tripStatus: Swift.String
+  public let startAddress: Swift.String?
+  public let endAddress: Swift.String?
   public let tripEvents: [AutoSDK.SdkTripEvent]?
   public let simplePath: [AutoSDK.SdkSimplePath]?
   public let smoothPath: [AutoSDK.SdkSimplePath]?
@@ -164,8 +187,10 @@ public struct SdkTripError : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc(Addinfo) public class Addinfo : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+@_inheritsConvenienceInitializers @objc(Addinfo) nonisolated public class Addinfo : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
 public struct CollisionConfirmationInfo {
@@ -208,7 +233,9 @@ open class Permission {
     public var description: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -275,15 +302,15 @@ extension AutoSDK.SanukSDKError : Swift.CustomStringConvertible {
 extension AutoSDK.Vehicle {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Vehicle>
   @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
-  @objc @NSManaged dynamic public var id: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var id: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var vehicleName: Swift.String {
+  @objc @NSManaged nonisolated dynamic public var vehicleName: Swift.String {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var macAddress: Swift.String {
+  @objc @NSManaged nonisolated dynamic public var macAddress: Swift.String {
     @objc get
     @objc set
   }
@@ -313,12 +340,24 @@ public enum SanukSDKState {
   }
   public func start(driverID: Swift.String, delegate: any AutoSDK.SanukSDKDelegate)
   public func stop()
-  public func checkSdkSettings(completion: (AutoSDK.AutoSdkSettings) -> Swift.Void)
+  public func configure(environment: AutoSDK.SanukSDKEnvironment)
+  public func setBackgroundDataCollectionConsent(_ accepted: Swift.Bool)
+  public func setBackgroundDataDisclosureAccepted(_ accepted: Swift.Bool)
+  public func isBackgroundDataDisclosureAccepted() -> Swift.Bool
+  public func checkSdkSettings(completion: @escaping (AutoSDK.AutoSdkSettings) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getDriverScore(_ completion: @escaping (AutoSDK.DriverScore?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getWeeklyScore(_ completion: @escaping ([AutoSDK.DriverScore]?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getTrips(pageIndex: Swift.Int, tripsPerPage: Swift.Int, _ completion: @escaping ([AutoSDK.SdkTripModel]?) -> Swift.Void)
+  #endif
   public func deleteTrips(tripID: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getRanking(interval: AutoSDK.RankingInterval, _ completion: @escaping (AutoSDK.RankingModel?) -> Swift.Void)
+  #endif
   public func getLocalTrips() -> [AutoSDK.Trips]
   public func getAssociatedVehicles() -> [AutoSDK.Vehicle]
   public func associateVehicle(vehicleName: Swift.String, bluetoothId: Swift.String)
@@ -331,16 +370,22 @@ public enum SanukSDKState {
 public struct MockCollisionInfo {
   public init(tripID: Swift.String, latitude: Swift.Double, longitude: Swift.Double)
 }
-@_inheritsConvenienceInitializers @objc(Health) public class Health : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+@_inheritsConvenienceInitializers @objc(Health) nonisolated public class Health : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(Vehicle) public class Vehicle : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+@_inheritsConvenienceInitializers @objc(Vehicle) nonisolated public class Vehicle : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(Trips) public class Trips : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+@_inheritsConvenienceInitializers @objc(Trips) nonisolated public class Trips : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
 extension AutoSDK.Permission {
@@ -350,9 +395,11 @@ extension AutoSDK.Permission {
   override open var kind: AutoSDK.Permission.Kind {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   open var usageDescriptionKey: Swift.String? {
     get
   }
+  #endif
   override public var status: AutoSDK.Permission.Status {
     get
   }
@@ -417,33 +464,43 @@ extension AutoSDK.Permission {
 extension AutoSDK.Addinfo {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Addinfo>
   @nonobjc public class func deleteRequest(deleteFetch: CoreData.NSFetchRequest<any CoreData.NSFetchRequestResult>) -> CoreData.NSBatchDeleteRequest
-  @objc @NSManaged dynamic public var isActive: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var isActive: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var id: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var keyfield: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var keyfield: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var valuefield: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var valuefield: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var trip: AutoSDK.Trips? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var trip: AutoSDK.Trips? {
     @objc get
     @objc set
   }
+  #endif
 }
 public struct BluetoothDevice {
   public let name: Swift.String
   public let identifier: Swift.String
 }
-@_inheritsConvenienceInitializers @objc(Location) public class Location : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+@_inheritsConvenienceInitializers @objc(Location) nonisolated public class Location : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
 public struct DriverScore : Swift.Codable {
@@ -465,6 +522,7 @@ public enum AutoSdkIssue {
   case activityPermissionNotAuthorized
   case locationAccuracyReduced
   case backgroundRefreshDisabled
+  case backgroundDataDisclosureRequired
   public static func == (a: AutoSDK.AutoSdkIssue, b: AutoSDK.AutoSdkIssue) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -477,58 +535,64 @@ public struct CollisionInfo {
 extension AutoSDK.Trips {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Trips>
   @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
-  @objc @NSManaged dynamic public var id: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var startDate: Swift.Int64 {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var startDate: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var endDate: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var endDate: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.Int32 {
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Int32 {
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var uploaded: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var uploaded: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var processed: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var processed: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var evens: Foundation.NSSet? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var evens: Foundation.NSSet? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var infos: Foundation.NSSet? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var infos: Foundation.NSSet? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var isVehicleTagged: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var isVehicleTagged: Swift.Bool {
     @objc get
     @objc set
   }
-  public var events: [AutoSDK.Location] {
+  nonisolated public var events: [AutoSDK.Location] {
     get
   }
-  public var addinfo: [AutoSDK.Addinfo] {
+  nonisolated public var addinfo: [AutoSDK.Addinfo] {
     get
   }
 }
 extension AutoSDK.Trips {
-  @objc(addEvensObject:) @NSManaged dynamic public func addToEvens(_ value: AutoSDK.Location)
-  @objc(removeEvensObject:) @NSManaged dynamic public func removeFromEvens(_ value: AutoSDK.Location)
-  @objc(addEvens:) @NSManaged dynamic public func addToEvens(_ values: Foundation.NSSet)
-  @objc(removeEvens:) @NSManaged dynamic public func removeFromEvens(_ values: Foundation.NSSet)
+  @objc(addEvensObject:) @NSManaged nonisolated dynamic public func addToEvens(_ value: AutoSDK.Location)
+  @objc(removeEvensObject:) @NSManaged nonisolated dynamic public func removeFromEvens(_ value: AutoSDK.Location)
+  @objc(addEvens:) @NSManaged nonisolated dynamic public func addToEvens(_ values: Foundation.NSSet)
+  @objc(removeEvens:) @NSManaged nonisolated dynamic public func removeFromEvens(_ values: Foundation.NSSet)
 }
 extension AutoSDK.Trips : Swift.Identifiable {
   public typealias ID = Swift.String?
@@ -536,55 +600,55 @@ extension AutoSDK.Trips : Swift.Identifiable {
 extension AutoSDK.Health {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Health>
   @nonobjc public class func deleteRequest() -> CoreData.NSBatchDeleteRequest
-  @objc @NSManaged dynamic public var id: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var id: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var timestamp: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var timestamp: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var isUploaded: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var isUploaded: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var sdkVersion: Swift.String {
+  @objc @NSManaged nonisolated dynamic public var sdkVersion: Swift.String {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var sdkStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var sdkStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var powerSaverStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var powerSaverStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var batteryOptimizationStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var batteryOptimizationStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var backgroundRestrictionStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var backgroundRestrictionStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationPermissionStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var locationPermissionStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var activityPermissionStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var activityPermissionStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var notificationPermissionStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var notificationPermissionStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var airplaneModeStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var airplaneModeStatus: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var backgroundRefreshStatus: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var backgroundRefreshStatus: Swift.Int16 {
     @objc get
     @objc set
   }
@@ -601,9 +665,11 @@ extension AutoSDK.Permission {
   override open var kind: AutoSDK.Permission.Kind {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   open var usageDescriptionKey: Swift.String? {
     get
   }
+  #endif
   override public var status: AutoSDK.Permission.Status {
     get
   }
@@ -625,194 +691,218 @@ public struct AutoSdkSettings {
 extension AutoSDK.Location {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<AutoSDK.Location>
   @nonobjc public class func deleteRequest(deleteFetch: CoreData.NSFetchRequest<any CoreData.NSFetchRequestResult>) -> CoreData.NSBatchDeleteRequest
-  @objc @NSManaged dynamic public var acceleration: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var acceleration: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationX: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationX: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationXOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationXOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationY: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationY: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationYOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationYOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationZ: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationZ: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accelerationZOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accelerationZOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var accuracy: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accuracy: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var batteryLevel: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var batteryLevel: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var beaconID: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var beaconID: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var course: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var course: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var deceleration: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var deceleration: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var deviceBlocked: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var deviceBlocked: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var driverId: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var driverId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var establishedIndexA: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var establishedIndexA: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var establishedIndexB: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var establishedIndexB: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gpsLevel: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var gpsLevel: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeX: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeX: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeXOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeXOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeY: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeY: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeYOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeYOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeZ: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeZ: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var gyroscopeZOriginal: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var gyroscopeZOriginal: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var height: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var height: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var lateral: Swift.Int16 {
+  @objc @NSManaged nonisolated dynamic public var lateral: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var measuredPower: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var measuredPower: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var midSpeed: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var midSpeed: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var number: Swift.Int32 {
+  @objc @NSManaged nonisolated dynamic public var number: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var ping: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var ping: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var pitch: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var pitch: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var pointDate: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var pointDate: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var quantile: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var quantile: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var roll: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var roll: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var rssi: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var rssi: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var screenEnabled: Swift.Int16 {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var screenEnabled: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var speed: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var speed: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var tickTimestamp: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var tickTimestamp: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var totalMeters: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var totalMeters: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var tripId: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var tripId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var vehicleIndicators: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var vehicleIndicators: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var version: Swift.Int16 {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var version: Swift.Int16 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var yaw: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var yaw: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var trip: AutoSDK.Trips? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var trip: AutoSDK.Trips? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var pressure: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var pressure: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var vehType: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var vehType: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension AutoSDK.Location : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
@@ -826,9 +916,13 @@ public protocol TripInfo : ObjectiveC.NSObjectProtocol {
   var driverId: Swift.String { get set }
   var tripId: Swift.String { get set }
   var startTime: Swift.Int64 { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
   var sessionid: Swift.String? { get set }
+  #endif
   var distance: Swift.Double { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
   var endTime: Swift.Int64? { get set }
+  #endif
 }
 public struct HealthData {
   public var timestamp: Swift.Int64
@@ -844,6 +938,9 @@ public struct HealthData {
   public var airplaneModeStatus: Swift.Int16
   public var backgroundRefreshStatus: Swift.Int16
 }
+extension AutoSDK.SanukSDKEnvironment : Swift.Equatable {}
+extension AutoSDK.SanukSDKEnvironment : Swift.Hashable {}
+extension AutoSDK.SanukSDKEnvironment : Swift.RawRepresentable {}
 extension AutoSDK.LocationAccuracy : Swift.Equatable {}
 extension AutoSDK.LocationAccuracy : Swift.Hashable {}
 extension AutoSDK.RankingInterval : Swift.Equatable {}

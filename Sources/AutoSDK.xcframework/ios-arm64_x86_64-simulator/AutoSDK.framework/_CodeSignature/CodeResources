@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/libswift_Concurrency.dylib</key>
-		<data>
-		RiHusyrNbUBpFP9/mJiEiOSMSsA=
-		</data>
 		<key>Headers/AutoSDK-Swift.h</key>
 		<data>
-		VuA0vkVrSOE1+gliiP6CfwfsyeM=
+		xd8xcj8aa8CAwW1limLb8VNUBC4=
 		</data>
 		<key>Headers/AutoSDK.h</key>
 		<data>
@@ -18,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MDNXOopUzNIzRVCNCIg0hS/Jqno=
+		pgnf6Zt7ufPCiLbixFERRt+oG8c=
 		</data>
 		<key>Locations.momd/Locations 2.mom</key>
 		<data>
-		yvigEBhCVJo/D4I8JOr31t80Kw8=
+		t717RGs4GhPPkvMyWnFxslx0nuE=
 		</data>
 		<key>Locations.momd/Locations 2.omo</key>
 		<data>
@@ -30,7 +26,7 @@
 		</data>
 		<key>Locations.momd/Locations.mom</key>
 		<data>
-		vSbcBwuK6VKDynpff0mhlMgsH7s=
+		1sMO5Xcpcwt2ts5QcfImVtaJ+4A=
 		</data>
 		<key>Locations.momd/VersionInfo.plist</key>
 		<data>
@@ -38,47 +34,47 @@
 		</data>
 		<key>MainConfig.xcconfig</key>
 		<data>
-		yBcYEWFzeYymBkTEV3nMpM1wlYE=
+		OSDdJUf+E8HYRXQgwTl9LFRTZO0=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		pvlfC9ZGhRI0wtz8dpapO9668LQ=
+		W14hMxADDJYcOkAhLu0kxHlFVpA=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SHnapVnlyFLIyO6BPJa0s5TLbjo=
+		bZ6W7n2urKZI9mIjEaBIuZY8ULQ=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		pbIWeQ2iKUkhDE2hOpefqRti0l0=
+		vl0bZO9v2uBiJ2d1GECb4npag1I=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SHnapVnlyFLIyO6BPJa0s5TLbjo=
+		bZ6W7n2urKZI9mIjEaBIuZY8ULQ=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fpLb5o86nVfqXuR6Tlwa7t8lj24=
+		EeX5f9uABOsGCeC8gkOtbrUBjFM=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		pvlfC9ZGhRI0wtz8dpapO9668LQ=
+		W14hMxADDJYcOkAhLu0kxHlFVpA=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mWbYZ7Fy8KDT53OZ9qN5BNhc4w8=
+		OhmLFhXHC8X1kYXw3DpwirrAQvA=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RtpQPpruiynuMqGI1Ynv8x2XnMg=
+		4Cx/FhbZhev1TT73K39GKOPJMm0=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mWbYZ7Fy8KDT53OZ9qN5BNhc4w8=
+		OhmLFhXHC8X1kYXw3DpwirrAQvA=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Tn5TNSuF4X3AQngYSSS8CWsuqGA=
+		Q7VtsuMrnKuNafjXw/oHgMQ2Myg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -221,18 +217,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/libswift_Concurrency.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			00/tLxqdsUmOtcmWZ9nef6MNOxQ4tx7XvNYs2jINIUw=
-			</data>
-		</dict>
 		<key>Headers/AutoSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CbiqELt083aAQIMbLfao+x6iRs/Je3j4JG5Y3ulGsok=
+			jwXzXgECCWmV97EGSA/4MInd/QqbOM9HdW2p3nYPj8w=
 			</data>
 		</dict>
 		<key>Headers/AutoSDK.h</key>
@@ -246,7 +235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eZRsn75ALuwkI4azc94Y9xDUA50dpNPZPDFVtJzzaEY=
+			iZT7U95kMc/iXYu2PXtMGEpqdUGKbo2Alpa4JiZvVAo=
 			</data>
 		</dict>
 		<key>Locations.momd/Locations 2.omo</key>
@@ -260,7 +249,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WwPeUFbMY7VhRTIyf2R+qtBFBYh678TnwPHibal+wkc=
+			NgnKv4tGSpx9D2db2n5hOJwfoG8tyYr+8WB+BEcTbb4=
 			</data>
 		</dict>
 		<key>Locations.momd/VersionInfo.plist</key>
@@ -274,77 +263,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jTwVsK51LrTUuSxKLdK5X3zDERiah5+R/04aNdrrygo=
+			0kaftYnpqi6gVlyPohEcsJ2WU3ClO/nCBnGTKQdN3V4=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q6/UiP1EeInP/PLt2epnqCBZuFkWO7d6SUIPLWTd7io=
+			ntGwX3O3tco5rfs2Ecl6ZaCBbZMG3tvvnWIcEZZkb6o=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CHYfnOufEZ7dYoVQCPnvEljusEITOipc8gwB1u633dE=
+			CwE9b8VlW9gPDBRHw2I+qTg5Ez8MuqR/72tiKqWnxuk=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9/TGbfQCQhLYm2/WXHOxlVVawtg3r9ZaNgucHm1l8qM=
+			7pj4IRKiXcztyW6oHYf8nzL6MMxg2afr/iIkZL+gIQE=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CHYfnOufEZ7dYoVQCPnvEljusEITOipc8gwB1u633dE=
+			CwE9b8VlW9gPDBRHw2I+qTg5Ez8MuqR/72tiKqWnxuk=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			450Nm09RhYh+YB56455hzbcp3fqjn5jH7bGvH+rPYzU=
+			Y2643Gx8ojjRDAV+xkjvQp5zkwd1wxdTAekoqu+DvtY=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q6/UiP1EeInP/PLt2epnqCBZuFkWO7d6SUIPLWTd7io=
+			ntGwX3O3tco5rfs2Ecl6ZaCBbZMG3tvvnWIcEZZkb6o=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mCsR1HHFCU9/vmjD3qtUOxIXnLjLKINsBCVJqfMK6TY=
+			ILWSV518UIq3C6O9dkGehHXQKxWcyGm3OKl1RHWB/tc=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YSJ8aTj9x5a3FK0UMNscOM5ZBrw/URrh7GTj/G1gEUE=
+			5B3oepOtIJci2XRywBK55IHTPBy3FDsNtTb6/xmBB/w=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mCsR1HHFCU9/vmjD3qtUOxIXnLjLKINsBCVJqfMK6TY=
+			ILWSV518UIq3C6O9dkGehHXQKxWcyGm3OKl1RHWB/tc=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jZJZmSFnDAdzdnN9SAFqhdgmfnaAhqkm9GEEr3jIEic=
+			MhtRPtvzdtIGQrwOSJnng/4pPM9H4x8w3xO4HbBjpkM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

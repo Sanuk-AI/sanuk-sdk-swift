@@ -9,4 +9,8 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-SDK_VERSION = 0.0.2
+SDK_VERSION = 0.2.2
+
+// Defaults when an environment-specific xcconfig is not included (AutoSDK target).
+SANUK_ENVIRONMENT = production
+API_BASE_URL = https:/$()/kamo.sanuk.tech
