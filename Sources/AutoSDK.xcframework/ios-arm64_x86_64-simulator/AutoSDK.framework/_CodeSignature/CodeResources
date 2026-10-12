@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		W14hMxADDJYcOkAhLu0kxHlFVpA=
+		4pf/UGjvsSzfcICbVMZ5R05UVW8=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		W14hMxADDJYcOkAhLu0kxHlFVpA=
+		4pf/UGjvsSzfcICbVMZ5R05UVW8=
 		</data>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -270,7 +270,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntGwX3O3tco5rfs2Ecl6ZaCBbZMG3tvvnWIcEZZkb6o=
+			r60PNNYUawkJs3EpZ764+gXNfG8VGGOr9KccQDkkNuw=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -305,7 +305,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntGwX3O3tco5rfs2Ecl6ZaCBbZMG3tvvnWIcEZZkb6o=
+			r60PNNYUawkJs3EpZ764+gXNfG8VGGOr9KccQDkkNuw=
 			</data>
 		</dict>
 		<key>Modules/AutoSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
