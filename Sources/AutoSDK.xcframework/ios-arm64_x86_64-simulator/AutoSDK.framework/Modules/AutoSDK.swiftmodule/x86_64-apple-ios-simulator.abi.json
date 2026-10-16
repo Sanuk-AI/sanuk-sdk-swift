@@ -26720,7 +26720,7 @@
     {
       "filePath": "\/Volumes\/Macintosh_HD\/Users\/user294468\/Developer\/sanuk-sdk-ios\/AutoSDK\/Core\/CoreDataManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 10257,
+      "offset": 10461,
       "length": 4,
       "value": "true"
     },
@@ -27448,28 +27448,28 @@
     {
       "filePath": "\/Volumes\/Macintosh_HD\/Users\/user294468\/Developer\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8828,
+      "offset": 9049,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Macintosh_HD\/Users\/user294468\/Developer\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8856,
+      "offset": 9077,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Macintosh_HD\/Users\/user294468\/Developer\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9771,
+      "offset": 9992,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/Macintosh_HD\/Users\/user294468\/Developer\/sanuk-sdk-ios\/AutoSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9799,
+      "offset": 10020,
       "length": 5,
       "value": "false"
     },
